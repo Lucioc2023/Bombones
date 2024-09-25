@@ -84,7 +84,7 @@ namespace Bombones.Windows
 
         private void btnFormasDePago_Click(object sender, EventArgs e)
         {
-            frmFormasDePago frm = new frmFormasDePago();
+            frmFormasDePago frm = new frmFormasDePago(_serviceProvider);
             frm.ShowDialog();
         }
     }

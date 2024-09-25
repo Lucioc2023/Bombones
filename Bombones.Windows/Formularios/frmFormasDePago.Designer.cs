@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormasDePago));
             panel1 = new Panel();
             dgvDatos = new DataGridView();
+            colFormaPago = new DataGridViewTextBoxColumn();
             toolStrip1 = new ToolStrip();
             tsbNuevo = new ToolStripButton();
             tsbBorrar = new ToolStripButton();
@@ -43,7 +44,6 @@
             tsbImprimir = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
             tsbCerrar = new ToolStripButton();
-            colFormaPago = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             toolStrip1.SuspendLayout();
@@ -53,9 +53,10 @@
             // 
             panel1.Controls.Add(dgvDatos);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 62);
+            panel1.Location = new Point(0, 67);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 388);
+            panel1.Size = new Size(914, 533);
             panel1.TabIndex = 7;
             // 
             // dgvDatos
@@ -68,20 +69,31 @@
             dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colFormaPago });
             dgvDatos.Dock = DockStyle.Fill;
             dgvDatos.Location = new Point(0, 0);
+            dgvDatos.Margin = new Padding(3, 4, 3, 4);
             dgvDatos.MultiSelect = false;
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersVisible = false;
+            dgvDatos.RowHeadersWidth = 51;
             dgvDatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDatos.Size = new Size(800, 388);
+            dgvDatos.Size = new Size(914, 533);
             dgvDatos.TabIndex = 0;
+            // 
+            // colFormaPago
+            // 
+            colFormaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colFormaPago.HeaderText = "Forma de Pago";
+            colFormaPago.MinimumWidth = 6;
+            colFormaPago.Name = "colFormaPago";
+            colFormaPago.ReadOnly = true;
             // 
             // toolStrip1
             // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { tsbNuevo, tsbBorrar, tsbEditar, toolStripSeparator1, tsbFiltrar, tsbActualizar, toolStripSeparator2, tsbImprimir, toolStripSeparator3, tsbCerrar });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 62);
+            toolStrip1.Size = new Size(914, 67);
             toolStrip1.TabIndex = 6;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -91,7 +103,7 @@
             tsbNuevo.ImageScaling = ToolStripItemImageScaling.None;
             tsbNuevo.ImageTransparentColor = Color.Magenta;
             tsbNuevo.Name = "tsbNuevo";
-            tsbNuevo.Size = new Size(46, 59);
+            tsbNuevo.Size = new Size(56, 64);
             tsbNuevo.Text = "Nuevo";
             tsbNuevo.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -101,7 +113,7 @@
             tsbBorrar.ImageScaling = ToolStripItemImageScaling.None;
             tsbBorrar.ImageTransparentColor = Color.Magenta;
             tsbBorrar.Name = "tsbBorrar";
-            tsbBorrar.Size = new Size(44, 59);
+            tsbBorrar.Size = new Size(54, 64);
             tsbBorrar.Text = "Borrar";
             tsbBorrar.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -111,14 +123,14 @@
             tsbEditar.ImageScaling = ToolStripItemImageScaling.None;
             tsbEditar.ImageTransparentColor = Color.Magenta;
             tsbEditar.Name = "tsbEditar";
-            tsbEditar.Size = new Size(44, 59);
+            tsbEditar.Size = new Size(52, 64);
             tsbEditar.Text = "Editar";
             tsbEditar.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 62);
+            toolStripSeparator1.Size = new Size(6, 67);
             // 
             // tsbFiltrar
             // 
@@ -126,7 +138,7 @@
             tsbFiltrar.ImageScaling = ToolStripItemImageScaling.None;
             tsbFiltrar.ImageTransparentColor = Color.Magenta;
             tsbFiltrar.Name = "tsbFiltrar";
-            tsbFiltrar.Size = new Size(44, 59);
+            tsbFiltrar.Size = new Size(51, 64);
             tsbFiltrar.Text = "Filtrar";
             tsbFiltrar.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -136,14 +148,14 @@
             tsbActualizar.ImageScaling = ToolStripItemImageScaling.None;
             tsbActualizar.ImageTransparentColor = Color.Magenta;
             tsbActualizar.Name = "tsbActualizar";
-            tsbActualizar.Size = new Size(63, 59);
+            tsbActualizar.Size = new Size(79, 64);
             tsbActualizar.Text = "Actualizar";
             tsbActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 62);
+            toolStripSeparator2.Size = new Size(6, 67);
             // 
             // tsbImprimir
             // 
@@ -151,14 +163,14 @@
             tsbImprimir.ImageScaling = ToolStripItemImageScaling.None;
             tsbImprimir.ImageTransparentColor = Color.Magenta;
             tsbImprimir.Name = "tsbImprimir";
-            tsbImprimir.Size = new Size(57, 59);
+            tsbImprimir.Size = new Size(70, 64);
             tsbImprimir.Text = "Imprimir";
             tsbImprimir.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 62);
+            toolStripSeparator3.Size = new Size(6, 67);
             // 
             // tsbCerrar
             // 
@@ -166,26 +178,22 @@
             tsbCerrar.ImageScaling = ToolStripItemImageScaling.None;
             tsbCerrar.ImageTransparentColor = Color.Magenta;
             tsbCerrar.Name = "tsbCerrar";
-            tsbCerrar.Size = new Size(44, 59);
+            tsbCerrar.Size = new Size(53, 64);
             tsbCerrar.Text = "Cerrar";
             tsbCerrar.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // colFormaPago
-            // 
-            colFormaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colFormaPago.HeaderText = "Forma de Pago";
-            colFormaPago.Name = "colFormaPago";
-            colFormaPago.ReadOnly = true;
+            tsbCerrar.Click += tsbCerrar_Click;
             // 
             // frmFormasDePago
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(panel1);
             Controls.Add(toolStrip1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmFormasDePago";
             Text = "frmFormasDePago";
+            Load += frmFormasDePago_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             toolStrip1.ResumeLayout(false);

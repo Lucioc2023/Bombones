@@ -95,7 +95,9 @@ namespace Bombones.Windows.Helpers
                     r.Cells[1].Value = telefono.TipoTelefono;
                     r.Cells[2].Value = telefono.Numero;
                     break;
-
+                case FormaPagoListDto fP:
+                    r.Cells[0].Value = fP.Descripcion;                    
+                    break;
 
                 default:
                     break;
